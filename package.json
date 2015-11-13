@@ -1,0 +1,11 @@
+{
+  "name": "agents-and-groups",
+  "version": "1.0.0",
+  "description": "NodeJS server for getting all agents and groups",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register --reporter spec"
+  },
+  "author": "Krzysztof Karol <krzysztof.karol@gmail.com> (http://krzysztofkarol.com)",
+  "license": "ISC"
+}
