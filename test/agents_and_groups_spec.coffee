@@ -90,3 +90,9 @@ describe "Server GET #{endpoint}", ->
         (err, res, body) ->
           assert.equal(body, errors.invalidApiKey.message)
           done()
+
+  describe "when requested with correct Auth", ->
+    it "should return agents", (done) ->
+      request.get url, (err, res, body) ->
+        assert.equal(res.statusCode, errors.basicAuth.code)
+        done()
