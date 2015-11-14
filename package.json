@@ -1,7 +1,7 @@
 {
   "name": "agents-and-groups",
   "version": "1.0.0",
-  "description": "NodeJS server for getting all agents and groups",
+  "description": "NodeJS server for getting all agents and groups from LiveChat",
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register --reporter spec"
@@ -10,13 +10,12 @@
   "license": "ISC",
   "devDependencies": {
     "coffee-script": "^1.10.0",
-    "mocha": "^2.3.3",
-    "underscore": "^1.8.3"
+    "mocha": "^2.3.3"
   },
   "dependencies": {
     "basic-auth": "^1.0.3",
     "express": "^4.13.3",
     "request": "^2.65.0",
-    "validator": "^4.2.1"
+    "underscore": "^1.8.3"
   }
 }

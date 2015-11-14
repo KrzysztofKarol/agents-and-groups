@@ -17,6 +17,7 @@ endpoint = '/agents_and_groups'
 url = "#{base}:#{port}#{endpoint}"
 
 # Extend auth object with invalid data
+# TODO: ASK: Should it be here or just before test?
 auth = _.extend(auth, {
   invalidLogin: 'Invalid Login',
   invalidApiKey: 'invalidapikey'
@@ -32,6 +33,8 @@ Run server
 ###
 Tests
 ###
+
+# TODO: Refactor + write tests when connected to livechat
 
 describe "Server GET #{endpoint}", ->
   describe "when requested without HTTP Basic Auth", ->
@@ -90,9 +93,3 @@ describe "Server GET #{endpoint}", ->
         (err, res, body) ->
           assert.equal(body, errors.invalidApiKey.message)
           done()
-
-  describe "when requested with correct Auth", ->
-    it "should return agents", (done) ->
-      request.get url, (err, res, body) ->
-        assert.equal(res.statusCode, errors.basicAuth.code)
-        done()
